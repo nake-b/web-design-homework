@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Acme Web Design</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        background-color: #f4f4f4;
+        color: white;
+
+        margin: 0;
+
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        line-height: 1.5;
+      }
+
+      body > section,
+      header,
+      footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .strip {
+        background-color: #35424a;
+        min-height: 70px;
+      }
+
+      header {
+        border-bottom-color: #e8491d;
+        border-bottom-width: 3px;
+        min-height: 70px;
+        border-bottom-style: solid;
+        color: white;
+      }
+
+      .strip > div {
+        width: 80%;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      #header-strip {
+        padding-bottom: 7px;
+        padding-top: 7px;
+      }
+
+      #news-strip {
+        padding-bottom: 15px;
+        padding-top: 15px;
+      }
+
+      #news-strip h2 {
+        padding-right: 10px;
+      }
+
+      .strip input {
+        border-radius: 1.5px;
+        border-width: 0px;
+      }
+
+      .strip input[type="email"] {
+        height: 32px;
+        width: 230px;
+      }
+
+      .strip input[type="submit"] {
+        color: white;
+        height: 34.323px;
+        background-color: #e8491d;
+      }
+
+ 
+      nav > ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 35px;
+        padding-left: 0px;
+      }
+      nav li {
+        display: inline-block;
+        list-style-type: none;
+      }
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+      }
+      nav a:hover {
+        font-weight: bolder;
+      }
+      .highlight {
+        color: #e8491d !important;
+        font-weight: bold;
+      }
+      #banner {
+        background-image: url("images/showcase.jpg");
+        background-repeat: no-repeat;
+        background-position-y: -400px;
+        min-height: 400px;
+      }
+      #banner-container {
+        width: 80%;
+        text-align: center;
+      }
+      #banner h1 {
+        display: inline-block;
+        padding-top: 100px;
+        font-size: 55px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+      }
+      #banner p {
+        font-size: 20px;
+      }
+
+      #services > div {
+        color: black;
+        width: 80%;
+
+        padding-top: 30px;
+        padding-bottom: 52px;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+      }
+
+      #services h3 {
+        margin-bottom: 0px;
+      }
+
+      .service {
+        width: 29%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        text-align: center;
+      }
+
+      .service img {
+        /*width: 25%;*/
+        width: 90px;
+        height: 90px;
+      }
+
+      footer {
+        display: flex;
+        align-items: center;
+        background-color: #e8491d;
+        min-height: 92px;
+      }
+      @media screen and (max-width: 800px) {
+        .strip > div {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+
+        #services > div {
+          padding-top: 30px;
+          padding-bottom: 52px;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 25px;
+        }
+
+        .service {
+          width: 58%;
+        }
+
+      }
+    </style>
+  </head>
+  <body>
+    <header class="strip" id="header-strip">
+      <div>
+        <h1><span class="highlight">Acme</span> Web Design</h1>
+        <nav>
+          <ul>
+            <li><a class="highlight" href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">SERVICES</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section id="banner">
+      <div id="banner-container">
+        <h1>Affordable Professional Websites</h1>
+        <p>
+          Another area to consider is Venice and the Po Valley in Italy... What
+          better way to explore Venice than by water! Cruising on a fully
+          crewed, all inclusive hotel barge is a fantastic way to relax and
+          experience the beauty and culture of the country.
+        </p>
+      </div>
+    </section>
+    <section class="strip" id="news-strip">
+      <div>
+        <h2>Subscribe To Our Newsletter</h2>
+        <form action="subs.py">
+          <input type="email" name="email" placeholder="Enter Email..." />
+          <input type="submit" value="Subscribe" />
+        </form>
+      </div>
+    </section>
+    <section id="services">
+      <div>
+        <div class="service">
+          <img src="images/logo_html.png" />
+          <h3>HTML5 Markup</h3>
+          <p>
+            Another area to consider is Venice and the Po Valley in Italy...
+          </p>
+        </div>
+        <div class="service">
+          <img src="images/logo_css.png" />
+          <h3>CSS3 Styling</h3>
+          <p>
+            Another area to consider is Venice and the Po Valley in Italy...
+          </p>
+        </div>
+        <div class="service">
+          <img src="images/logo_brush.png" />
+          <h3>Graphic Design</h3>
+          <p>
+            Another area to consider is Venice and the Po Valley in Italy...
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div>
+        <p>Acme Web Design, Copyright © 2017</p>
+      </div>
+    </footer>
+  </body>
+</html>
